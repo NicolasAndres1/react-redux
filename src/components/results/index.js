@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Page from './page.js';
 
-const Results = props => {
+const Results = ({suggestions}) => {
+    console.log(suggestions)
     return (
         <>
             <Page />
@@ -9,4 +11,12 @@ const Results = props => {
     );
 }
 
-export default Results;
+const mapStateToProps = (state) => {
+    return {
+        suggestions: state.suggestions
+    };
+};
+
+// const mapDispatchToProps = (dispatch) => {return};
+
+export default connect(mapStateToProps, {})(Results);
