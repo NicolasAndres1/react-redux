@@ -1,13 +1,13 @@
 import { createStore, combineReducers } from 'redux';
 
-import CurrentItem from './reducers/currentItem';
-import Results from './reducers/results';
-import Suggestions from './reducers/suggestions';
+import currentItem from './reducers/currentItem';
+import results from './reducers/results';
+import suggestions from './reducers/suggestions';
 
 const reducer = combineReducers({
-    CurrentItem,
-    Results,
-    Suggestions
+    currentItem,
+    results,
+    suggestions
 });
 
 const store = createStore(reducer);
